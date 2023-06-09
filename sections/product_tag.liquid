@@ -1,0 +1,53 @@
+
+<section class="collection-section">
+  <div class="container">
+    <h2>{{ section.settings.collection.title }}</h2>
+    <ul class="product-list">
+      {% for product in collections[section.settings.collection.handle].products limit: section.settings.num_products %}
+  {% if product.tags contains 'tsirt' %}
+          <a href="{{ product.url }}" class="product">
+            <img src="{{ product.featured_image.src | img_url: 'medium' }}" alt="{{ product.featured_image.alt }}">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money }}</p>
+          </a>
+    
+
+      {% endif %}
+      {% endfor %}
+      
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "product_tag",
+  "settings": [
+    {
+      "type": "collection",
+      "label": "Collection",
+      "id": "collection"
+    },
+    {
+      "type": "range",
+      "label": "Number of Products to Display",
+      "id": "num_products",
+      "min": 1,
+      "max": 10,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "product_tag",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

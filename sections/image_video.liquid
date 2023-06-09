@@ -1,0 +1,98 @@
+{% style %}
+  .video-image-section {
+  display: flex;
+}
+
+.video-image-left {
+  flex-basis: 50%;
+}
+
+.video-image-right {
+  flex-basis: 50%;
+}
+
+.video-image-right h2 {
+  font-size: 24px;
+}
+
+.video-image-right p {
+  font-size: 16px;
+}
+
+.video-image-right a {
+  display: inline-block;
+  padding: 10px 50px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+  {% endstyle %}
+
+<div class="video-image-section">
+  <div class="video-image-left">
+      <div>{{ section.settings.video_url }}</div>
+    <div>  
+    <img src="{{ section.settings.image | img_url:"poco" }}" alt="Image">
+   </div>
+   {{ section.settings.imagewithtext }} 
+     
+  </div>
+  <div class="video-image-right">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "imagevideo",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "Enter Title"
+    },
+    {
+      "type":"text",
+      "label":"image video text",
+      "id":"imagewithtext"
+    },
+    {
+      "type": "textarea",
+      "label": "Short Description",
+      "id": "description",
+      "default": "Enter Description"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text",
+      "default": "Button"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Video URL",
+      "id": "video_url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "imagevideo",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+

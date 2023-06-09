@@ -1,0 +1,186 @@
+{
+  "current": {
+    "bg": "#ffffff",
+    "text_color": "#000000",
+    "show_search": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "7ff50179-29ff-450e-84ca-de3b1526fcc8": {
+        "type": "slider",
+        "blocks": {
+          "4f96716b-1eff-498f-83ac-c37a3d64ad38": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/woman-relaxed-work.jpg"
+            }
+          },
+          "fe293f95-f0b1-48a5-9bc3-8f4dee03f0af": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/working-at-night.jpg"
+            }
+          },
+          "109bf29a-2599-4303-ad27-4fd0b82ee1fc": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/woman-relaxed-work.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "4f96716b-1eff-498f-83ac-c37a3d64ad38",
+          "fe293f95-f0b1-48a5-9bc3-8f4dee03f0af",
+          "109bf29a-2599-4303-ad27-4fd0b82ee1fc"
+        ],
+        "settings": {
+        }
+      },
+      "7942bf0d-0004-43ff-a603-d1af84fa93cc": {
+        "type": "icongridimage",
+        "blocks": {
+          "7942bf0d-0004-43ff-a603-d1af84fa93cc-168611738868b138e0-0": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "74771572-a365-44a5-9349-3b878bfd1ef2": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "2eb5cefd-2494-4d1d-ac7c-3fd006f8cc02": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "3ab2a847-1bf2-4180-9069-97fb654b6bbe": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "2ba564b7-349d-4b8b-b9c2-445648b7ea82": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "93cb1b25-888f-46a7-8a7f-713cb191b638": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "1e25c55a-5004-4598-8e16-072eecbf4d5f": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          },
+          "fb2b40e3-b95d-4daf-87ae-59106d1700b8": {
+            "type": "gallery",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1384060.png"
+            }
+          }
+        },
+        "block_order": [
+          "7942bf0d-0004-43ff-a603-d1af84fa93cc-168611738868b138e0-0",
+          "74771572-a365-44a5-9349-3b878bfd1ef2",
+          "2eb5cefd-2494-4d1d-ac7c-3fd006f8cc02",
+          "3ab2a847-1bf2-4180-9069-97fb654b6bbe",
+          "2ba564b7-349d-4b8b-b9c2-445648b7ea82",
+          "93cb1b25-888f-46a7-8a7f-713cb191b638",
+          "1e25c55a-5004-4598-8e16-072eecbf4d5f",
+          "fb2b40e3-b95d-4daf-87ae-59106d1700b8"
+        ],
+        "settings": {
+        }
+      },
+      "f23eee60-e476-46cd-ac0c-58782001d238": {
+        "type": "product_tag",
+        "settings": {
+          "collection": "fashon",
+          "num_products": 10
+        }
+      },
+      "8eae50b4-827f-4b80-8f27-bc11d3522ab0": {
+        "type": "tabindex",
+        "blocks": {
+          "44a53999-f79f-4760-8c8a-cf6510868eb2": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "men",
+              "category": ""
+            }
+          },
+          "71bd2670-0122-440c-b7d4-c47e80ab49aa": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "women",
+              "category": ""
+            }
+          },
+          "f660f5db-6eee-4931-a4c5-6e211cf41908": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "fashon",
+              "category": ""
+            }
+          },
+          "6c4d2d3b-4e4f-4fc7-8acd-d38b15dac67a": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "shoes",
+              "category": ""
+            }
+          }
+        },
+        "block_order": [
+          "44a53999-f79f-4760-8c8a-cf6510868eb2",
+          "71bd2670-0122-440c-b7d4-c47e80ab49aa",
+          "f660f5db-6eee-4931-a4c5-6e211cf41908",
+          "6c4d2d3b-4e4f-4fc7-8acd-d38b15dac67a"
+        ],
+        "settings": {
+          "heading": "",
+          "subheading": ""
+        }
+      },
+      "53b8ecd2-9dd6-4f3d-b9df-9f4e89787b59": {
+        "type": "image_video",
+        "settings": {
+          "title": "Rock technolabs",
+          "imagewithtext": "this is demo",
+          "description": "Create one section of video or image with text on the home page. E.g. On the left side, I can upload the video or image, and on the right side, I can add text (Title, short description, and button with link). This all needs to be managed by customization.",
+          "button_link": "",
+          "button_text": "Button",
+          "image": "shopify:\/\/shop_images\/alex-haigh-fEt6Wd4t4j0-unsplash_69fd8f4d-4dd2-450d-a39e-113c4a19e352.jpg",
+          "video_url": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/_uk26swuAdE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>"
+        }
+      },
+      "43441489-8e7e-445f-b10b-691a167ca7c5": {
+        "type": "featured-product",
+        "settings": {
+          "heading": "Check out this product",
+          "product": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "7ff50179-29ff-450e-84ca-de3b1526fcc8",
+      "7942bf0d-0004-43ff-a603-d1af84fa93cc",
+      "f23eee60-e476-46cd-ac0c-58782001d238",
+      "8eae50b4-827f-4b80-8f27-bc11d3522ab0",
+      "53b8ecd2-9dd6-4f3d-b9df-9f4e89787b59",
+      "43441489-8e7e-445f-b10b-691a167ca7c5"
+    ]
+  }
+}

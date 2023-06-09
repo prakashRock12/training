@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "slider": {
+      "type": "slider",
+      "settings": {
+      }
+    },
+    "icongridimage": {
+      "type": "icongridimage",
+      "settings": {
+      }
+    },
+    "product_tag": {
+      "type": "product_tag",
+      "settings": {
+      }
+    },
+    "tabindex": {
+      "type": "tabindex",
+      "settings": {
+      }
+    },
+    "image_video": {
+      "type": "image_video",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "icongridimage",
+    "product_tag",
+    "tabindex",
+    "image_video"
+  ]
+}

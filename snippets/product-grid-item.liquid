@@ -1,0 +1,24 @@
+
+<div class="priceer">
+{% if product.compare_at_price_max > product.price %}
+    <span class=""><span>{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>Save</span>
+  {% endif %}
+</div>
+
+<a class="product-grid-item" href="{{ product.url }}">
+  <img src="{{ product.featured_image | img_url: "500x" }}">
+  
+  <span class="product-grid-item-text">
+    <h3>{{ product.title }}</h3>
+    <p class="product-grid-item-price">{{ product.price | money }}</p>
+
+    <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
+          {{ product.selected_or_first_available_variant.compare_at_price | money }}  
+    </p>
+    {% if product.available %}
+  <span class="in-stock">In Stock</span>
+{% else %}
+  <span class="out-of-stock">Out of Stock</span>
+{% endif %}
+  </span>
+</a>
