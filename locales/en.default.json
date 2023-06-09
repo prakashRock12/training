@@ -1,5 +1,12 @@
 {
   "General": {
     "add_to_cart": "Add to cart"
+  },
+  "shopify": {
+    "filters": {
+      "vendor": {
+        "label": "Vendor"
+      }
+    }
   }
 }

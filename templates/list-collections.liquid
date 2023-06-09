@@ -21,8 +21,8 @@
     <li>
       {%- if collection.image -%}
         {%- assign collection_image = collection.image -%}
-      {%- elsif collection.products.first and collection.products.first.images != empty -%}
-        {%- assign collection_image = collection.products.first.featured_image -%}
+      {%- elsif collection.products and collection.products.images != empty -%}
+        {%- assign collection_image = collection.products.featured_image -%}
       {%- else -%}
         {%- assign collection_image = blank -%}
       {%- endif -%}

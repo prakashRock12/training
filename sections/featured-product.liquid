@@ -1,6 +1,6 @@
-
-{% for product in collections.all.products limit:3 %}
 <div>
+{% for product in collections.all.products limit:3 %}
+
     <h3>{{ product.title }}</h3>
     <img src="{{ product.featured_image.src | img_url:"poco" }}" alt="{{ product.featured_image.alt }}" />
     <p>{{ product.price | money_with_currency }}</p>
@@ -8,9 +8,8 @@
       <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
       <input type="submit" value="Add to Cart" />
     </form>
-</div>
 {% endfor %}
-
+</div>
 {% schema %}
 {
   "name": "Featured product",

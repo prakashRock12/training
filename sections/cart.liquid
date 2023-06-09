@@ -1,3 +1,4 @@
+hello
 <div class="cart" data-money-format="{{ shop.money_format }}">
   <div class="width">
     {% form 'cart', cart %}
@@ -23,13 +24,13 @@
             Discounts: <strong id="total-discount">{{ cart.total_discounts | money }}</strong>
           </p>
           <p>
-            Total: <strong id="total-price">{{ cart.total_price | money }}</strong>
+              Subtotal: <strong id="total-price">{{ cart.total_price | money }}</strong>
           </p>
         </div>
 
-        <div class="cart-buttons">
+<!--         <div class="cart-buttons">
           <button type="submit" name="checkout" class="button full">Checkout</button>
-        </div>
+        </div> -->
       {% endif %}
     {% endform %}
   </div>
