@@ -1,42 +1,107 @@
-{{ 'style.css' | asset_url | stylesheet_tag }}
-<script
-  src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"crossorigin="anonymous"defer></script>
-<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"crossorigin="anonymous">
-       <div class="grid">
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://swiffyslider.com/configuration/?slider-item-show=slider-item-show6&slider-item-show2-sm=slider-item-show2-sm&preview-style=preview-images" rel="stylesheet" crossorigin="anonymous">
+
+
+<div class="swiffy-slider slider-item-show6 slider-item-show2-sm">
+    <ul class="slider-container">
        {% for block in section.blocks %}
-              <img src="{{ block.settings.image | img_url : "poco" }}">
-       {% endfor %}
-        </div>
-         
+        <li>
+           {{ block.settings.image | img_url: "poco" | img_tag: block.settings.image.alt, 'logo-bar__image' }}
+         </li>
+         {% endfor %}
+    </ul>
+
+<!--     <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button> -->
+
+    <div class="slider-indicators">
+        <button class="active"></button>
+        <button></button>
+        <button></button>
+    </div>
+</div>
+
 {% schema %}
   {
-    "name": "icongreed",
+    "name": "Logo list custom",
+    "class": "index-section",
+    "max_blocks": 10,
     "settings": [
-    ],
-      "blocks":[
       {
-        "type":"gallery",
-        "name":"Galelry",
-        "settings":[
-         {
-        "type":"image_picker",
-        "id":"image",
-        "label":"image"
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Logo list"       
+      },
+	  {
+        "type": "select",
+        "id": "logo_width",
+        "label": "Logo width",
+        "default": "150px",
+        "options": [
+          {
+            "label": "Extra Small",
+            "value": "100px"
+          },
+          {
+            "label": "Small",
+            "value": "125px"
+          },
+          {
+            "label": "Medium",
+            "value": "150px"
+          },
+          {
+            "label": "Large",
+            "value": "175px"
+          },
+          {
+            "label": "Extra Large",              
+            "value": "200px"
           }
         ]
       }
     ],
-     "presets":[
-        {
-        "name":"icongrid",
-        "category":"gallery",
-        "blocks":[
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Logo",
+        "settings": [
           {
-            "type":"gallery"
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "Optional"
           }
-         
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logo list custom",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          }
         ]
       }
     ]
   }
 {% endschema %}
+

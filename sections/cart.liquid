@@ -1,4 +1,4 @@
-hello
+
 <div class="cart" data-money-format="{{ shop.money_format }}">
   <div class="width">
     {% form 'cart', cart %}
@@ -35,7 +35,23 @@ hello
     {% endform %}
   </div>
 </div>
-
+<!-- add three product on cart page -->
+<div>
+{% for product in collections.all.products limit:3 %} 
+    <h3>{{ product.title }}</h3>
+      <img src="{{ product.featured_image.src | img_url:"200x" }}" alt="{{ product.featured_image.alt }}" />
+      <p>{{ product.price | money_with_currency }}</p>
+      <form action="/cart/add" method="post">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input type="submit" value="Add to Cart" />
+      </form>
+{% endfor %}
+<form action="/cart/add" method="post">
+        {% for product in collections.all.products limit:3 %}
+          <input type="hidden" name="id[]" value="{{ product.variants.first.id }}" />
+        {% endfor %}
+        <input type="submit" value="All Items to Cart" />
+      </form>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 {{ 'cart.js' | asset_url | script_tag }}
 

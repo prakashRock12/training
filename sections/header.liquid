@@ -1,30 +1,114 @@
-<header class="header">
-  <div class="width">
-    <a href="/" class="header-logo">
-     
+<ul class="main-navigation">
+  {%- for link in linklists.main-menu.links -%}
+  <li>
+    <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+      {{ link.title }}
     </a>
 
-    <input type="checkbox" id="header-toggle-menu" class="hide">
-
-    <label class="header-burger" for="header-toggle-menu">
-      {% render 'hamburger.svg' %}
-    </label>
-
-    <ul class="header-nav">
-      {% for link in linklists['main-menu'].links -%}
-        <li>{{ link.title | link_to: link.url }}</li>
-      {%- endfor %}
+    {%- if link.links != blank -%}
+    <ul>
+      {%- for child_link in link.links -%}
       <li>
-        
+        <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+          {{ child_link.title }}
+        </a>
+
+        {%- if child_link.links != blank -%}
+        <ul>
+          {%- for grandchild_link in child_link.links -%}
+          <li>
+            <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+              {{ grandchild_link.title }}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%} 
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+
+  </li>
+  {%- endfor -%}
+   <li>
         <a href="{{ routes.cart_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" id="mainIconPathAttribute"></path> </svg> ({{ cart.item_count }})</a>
       </li>
-    </ul>
-  </div>
-</header>
+</ul>
 
-{% schema %}
-{
-  "name": "Header",
-  "settings": []
+<style>
+ul.main-navigation {
+    list-style: none;
+    margin: 0;
+    background: #1bc2a2;
+    padding: 0 50px;
 }
-{% endschema %}
+
+ul.main-navigation li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #1bc2a2;
+  z-index: 9;
+}
+
+/* This hides the dropdowns */
+
+
+ul.main-navigation li ul { display: none; }
+
+ul.main-navigation li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul.main-navigation li a:hover { background: #2c3e50; }
+
+/* Display the dropdown */
+
+
+ul.main-navigation li:hover > ul {
+    display: block;
+    position: absolute;
+    padding-left: 0;
+    min-width: 150px;
+    
+}
+
+ul.main-navigation li:hover li { float: none; }
+
+ul.main-navigation li:hover a { background: #1bc2a2; }
+
+ul.main-navigation li:hover li a:hover { background: #2c3e50; }
+
+.main-navigation li ul li { border-top: 0; }
+
+/* Displays second level dropdowns to the right of the first level dropdown */
+
+
+ul.main-navigation ul ul {
+    left: 100%;
+    top: 0; 
+    padding-left: 0;
+}
+
+/* Simple clearfix */
+
+
+
+ul.main-navigation:before,
+ul.main-navigation:after,
+ul.main-navigation ul:before,
+ul.main-navigation ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+ul.main-navigation:after,
+ul.main-navigation ul:after { 
+  clear: both; 
+}
+</style>

@@ -9,6 +9,31 @@
   color: white;
   padding: 5px;
 }
+  .tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
   
   {% endstyle %}
 <div id="main-product--{{ section.id }}" class="main-product">
@@ -49,9 +74,7 @@
         </div>
         
 
-      <div class="main-product-description">
-        {{ product.description }}
-      </div>
+    
 
       {% form 'product', product %}
         <input
@@ -134,7 +157,39 @@
     </div>
   </div>
 </div>
+<!-- description and download  -->
 
+
+<div class="tabs">
+  <div class="tab" onclick="openTab(event, 'product-description')">Product Description</div>
+  <div class="tab" onclick="openTab(event, 'user-manual')">User Manual</div>
+</div>
+
+<div id="product-description" class="tab-content active">
+  <!-- Product Description content goes here -->
+  {{ product.description }} 
+</div>
+
+<div id="user-manual" class="tab-content">
+ <a href="{{ product.metafields.custom.download.value.url }}" download target="_blank">download</a>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  tabLinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- description and download end -->
 <script>
   // Product json
   var product = {{ product | json }}

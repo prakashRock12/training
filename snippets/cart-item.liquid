@@ -19,7 +19,9 @@
       {% endfor %}
     </ul>
   </div>
-
+<div class="cart-item-price">
+    <span class="line-unit-price">{{ item.price | money }}</span>
+  </div>
   <div class="cart-item-quantity">
     <div class="cart-quantity-selector quantity-selector">
       <button type="button">{% render 'minus.svg' %}</button>
