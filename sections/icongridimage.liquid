@@ -1,3 +1,4 @@
+
 <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
 <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 <link href="https://swiffyslider.com/configuration/?slider-item-show=slider-item-show6&slider-item-show2-sm=slider-item-show2-sm&preview-style=preview-images" rel="stylesheet" crossorigin="anonymous">
@@ -8,12 +9,12 @@
        {% for block in section.blocks %}
         <li>
            {{ block.settings.image | img_url: "poco" | img_tag: block.settings.image.alt, 'logo-bar__image' }}
-         </li>
-         {% endfor %}
+        </li>
+      {% endfor %}
     </ul>
 
-<!--     <button type="button" class="slider-nav"></button>
-    <button type="button" class="slider-nav slider-nav-next"></button> -->
+    <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button>
 
     <div class="slider-indicators">
         <button class="active"></button>

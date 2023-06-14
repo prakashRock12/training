@@ -43,7 +43,7 @@
         "type": "product_tag",
         "settings": {
           "heading": "specific collection",
-          "related_tag": "",
+          "related_tag": "mobile",
           "collection": "mobile",
           "number_of_products": "12"
         }
@@ -181,7 +181,7 @@
         ],
         "settings": {
           "title": "Logo list",
-          "logo_width": "100px"
+          "logo_width": "125px"
         }
       }
     },
