@@ -1,0 +1,38 @@
+
+  .priceper{
+  
+   
+  position: absolute;
+  top: 112px;
+  left: 24px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+}
+  .tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
+  
+  

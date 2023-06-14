@@ -42,7 +42,7 @@
       "f23eee60-e476-46cd-ac0c-58782001d238": {
         "type": "product_tag",
         "settings": {
-          "heading": "specific collection",
+          "heading": "specific collection wise   tag",
           "related_tag": "mobile",
           "collection": "mobile",
           "number_of_products": "12"
@@ -98,15 +98,9 @@
           "imagewithtext": "this is demo",
           "description": "Create one section of video or image with text on the home page. E.g. On the left side, I can upload the video or image, and on the right side, I can add text (Title, short description, and button with link). This all needs to be managed by customization.",
           "button_link": "#",
-          "button_text": "Buttondf",
+          "button_text": "submit",
           "image": "shopify:\/\/shop_images\/istockphoto-1221134337-1024x1024.jpg",
           "video_url": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/_uk26swuAdE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>"
-        }
-      },
-      "43441489-8e7e-445f-b10b-691a167ca7c5": {
-        "type": "featured-product",
-        "settings": {
-          "heading": "Check out this product"
         }
       },
       "5550b101-0c5f-4412-a00b-1897c5a7a74b": {
@@ -190,7 +184,6 @@
       "5550b101-0c5f-4412-a00b-1897c5a7a74b",
       "8eae50b4-827f-4b80-8f27-bc11d3522ab0",
       "53b8ecd2-9dd6-4f3d-b9df-9f4e89787b59",
-      "43441489-8e7e-445f-b10b-691a167ca7c5",
       "f23eee60-e476-46cd-ac0c-58782001d238"
     ]
   }

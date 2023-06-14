@@ -105,10 +105,9 @@
       {%- endif- %}
     {%- endfor -%}
   </div>
-
 </form> 
 {% if collection.metafields.custom.bannerimage %}
-  <img src="{{ collection.metafields.custom.bannerimage | img_url:"400x"}}" alt="Banner Image">
+  <img src="{{ collection.metafields.custom.bannerimage | img_url:"master"}}" alt="Banner Image" style="width:100%; height:50%">
 {% endif %}
 <div class="featured-collection">
   <div class="width">
