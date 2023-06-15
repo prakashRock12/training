@@ -83,6 +83,7 @@ buttons.forEach((button) => {
 
 
 document.querySelectorAll(".remove-item").forEach((remove) => {
+  document.getElementById(".remove-item cart-count").textContent = cart.item_count;
   remove.addEventListener("click", (e) => {
     e.preventDefault();
 

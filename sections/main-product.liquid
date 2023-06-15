@@ -243,7 +243,7 @@ function openTab(evt, tabName) {
       }
   })
 </script> 
-    <script>
+ <script>
       const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
 
 addToCartForms.forEach((form) => {
@@ -262,16 +262,18 @@ addToCartForms.forEach((form) => {
     const cart = await res.json();
   // console.log(cart.item_count);
     document.getElementById("cart-count").textContent = cart.item_count;
+    
     // Update cart count
     // document.querySelectorAll(".cart-count").forEach((el) => {
     //   el.textContent = cart.item_count;
     // });
 
     // Display message
-    // const message = document.createElement("p");
-    // message.classList.add("added-to-cart");
-    // message.textContent = "Added to cart!";
-    // form.appendChild(message);
+     const message = document.createElement("p");
+     // message.classList.add("added-to-cart");
+     window.alert("added-to-cart");
+     // message.textContent = "Added to cart!";
+     form.appendChild(message);
     // setTimeout(function(){
     //   form.querySelector(".added-to-cart").remove();
     // },3000);
